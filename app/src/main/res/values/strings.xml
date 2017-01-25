@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">shopping</string>
     <string name="Welcome">Benvenuto</string>
+    <string name="mytext01">PROVA</string>
     <string name="change_text">cambia testo</string>
     <string name="insert_text">inserisci testo</string>
 </resources>

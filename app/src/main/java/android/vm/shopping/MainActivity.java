@@ -1,6 +1,7 @@
 package android.vm.shopping;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,8 @@ public class MainActivity extends Activity {
     TextView welcomeTv;
     Button changeTextBtn;
     EditText insertText;
+    MainActivity activity = this;
+    String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +26,15 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         welcomeTv = (TextView) findViewById(R.id.welcome_tv);
         changeTextBtn = (Button) findViewById(R.id.change_Text_Btn);
-        insertText = (EditText) findViewById(R.id.edit_text_01)
+        insertText = (EditText) findViewById(R.id.edit_text_01);
         changeTextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                welcomeTv.setText(insertText.getText());
+                username = insertText.getText().toString();
+                Intent intent = new Intent(activity,SecondActivity.class);
+                intent.putExtra("useraname" , username);
+                intent.putExtra("age" , 18);
+                startActivity(intent);
             }
         });
 
