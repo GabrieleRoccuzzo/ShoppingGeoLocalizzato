@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-    TextView welcomeTv;
+
     Button changeTextBtn;
     EditText insertText;
     MainActivity activity = this;
@@ -24,9 +24,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        welcomeTv = (TextView) findViewById(R.id.welcome_tv);
-        changeTextBtn = (Button) findViewById(R.id.change_Text_Btn);
-        insertText = (EditText) findViewById(R.id.edit_text_01);
+
+        changeTextBtn = (Button) findViewById(R.id.button01);
+        insertText = (EditText) findViewById(R.id.search_bar);
         changeTextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

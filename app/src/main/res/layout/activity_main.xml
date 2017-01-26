@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="#DDDDDD"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentStart="true">
+
+    </RelativeLayout>
+
+    <view android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:paddingTop="50dp"
+        android:id="@+id/space01"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/welcome_tv"
-        android:text="@string/Welcome"/>
+        android:id="@+id/search_bar"
+        android:hint="@string/insert_text"
+        android:layout_alignBaseline="@+id/button01"
+        android:layout_alignBottom="@+id/button01"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/change_Text_Btn"
-        android:text="@string/change_text"/>
+        android:id="@+id/button01"
+        android:text="@string/change_text"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/space01"
+        android:layout_alignParentStart="true" />
 
-    <EditText
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edit_text_01"
-        android:hint="@string/insert_text"
-        />
+        android:layout_height="300dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="#DDDDDD"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/button01"
+        android:layout_alignParentStart="true">
 
-</LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
