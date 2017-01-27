@@ -15,25 +15,24 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 
-    Button changeTextBtn;
+    Button sendButton;
     EditText insertText;
     MainActivity activity = this;
-    String username;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        changeTextBtn = (Button) findViewById(R.id.button01);
+        sendButton = (Button) findViewById(R.id.button01);
         insertText = (EditText) findViewById(R.id.search_bar);
-        changeTextBtn.setOnClickListener(new View.OnClickListener(){
+        sendButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                username = insertText.getText().toString();
+
                 Intent intent = new Intent(activity,SecondActivity.class);
-                intent.putExtra("useraname" , username);
-                intent.putExtra("age" , 18);
+                intent.putExtra("search_value" , insertText.getText().toString());
                 startActivity(intent);
             }
         });

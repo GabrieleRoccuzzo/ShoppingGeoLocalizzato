@@ -10,10 +10,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="android.vm.shopping.SecondActivity">
 
-    <TextView
+    <android.support.v7.widget.RecyclerView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/text_01"
-        android:text="@string/mytext01"/>
+        android:id="@+id/rec01"/>
 
 </RelativeLayout>
