@@ -7,7 +7,7 @@ package android.vm.shopping;
 public class Items {
 
     private String Nome;
-    private Double prezzo;
+    private double prezzo;
     private int quantita;
 
     public Items(){}
@@ -20,11 +20,12 @@ public class Items {
         Nome = nome;
     }
 
-    public Double getPrezzo() {
-        return prezzo;
+    public String getPrezzo() {
+        String total = Double.toString(prezzo);
+        return total;
     }
 
-    public void setPrezzo(Double prezzo) {
+    public void setPrezzo(double prezzo) {
         this.prezzo = prezzo;
     }
 
