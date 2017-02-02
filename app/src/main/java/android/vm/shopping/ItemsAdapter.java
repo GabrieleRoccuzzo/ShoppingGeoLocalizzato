@@ -10,14 +10,17 @@ import java.util.ArrayList;
 
 
 /**
- * Created by Alessio-Valeria on 27/01/2017.
+ * l'adapter è un software per la gestione della sistemazione degli elementi di una lista che voglio visualizzare
  */
 
+// la recycleview ha un'attributo di tipo Adapter
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemsViewHolder>{
 
+    // inizializzo il mio dataset
     private ArrayList<Items> dataSet = new ArrayList<>();
 
-
+    // onCreateViewHolder è il primo metodo chiamato alla creazione di una riga (della lista)
+    //crea una riga con un layout (item_myrec01) ed una classe che rappresenta la riga (ItemsViewHolder)
     @Override
     public ItemsAdapter.ItemsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -29,11 +32,16 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemsViewHol
 
     }
 
+
+    //
     public void setDataSet(ArrayList<Items> items) {
         this.dataSet = items;
         notifyDataSetChanged();
     }
 
+
+    // onBindViewHolder è un metodo che posiziona la riga ad una determinata posizione (int position)
+    // sto dicendo di "attaccare" ad una determinata riga un elemento del mio dataset
     @Override
     public void onBindViewHolder(ItemsAdapter.ItemsViewHolder holder, int position) {
         Items currentItem = dataSet.get(position);
@@ -44,6 +52,8 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemsViewHol
         holder.itemQuantityTV.setText(currentItem.getQuantita());
     }
 
+
+    // setta la grandezza della lista (vuole un'int e ritorna la grandezza tramite dataSet.size)
     @Override
     public int getItemCount() {
         return dataSet.size();

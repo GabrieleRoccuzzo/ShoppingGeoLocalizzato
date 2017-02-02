@@ -18,12 +18,21 @@ public class MainActivity extends Activity {
     Button sendButton;
     EditText insertText;
     MainActivity activity = this;
+    Button addButton;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        addButton = (Button) findViewById(R.id.button2);
+        addButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent01 = new Intent(activity, AddActivity.class);
+                startActivity(intent01);
+                }
+            });
 
         sendButton = (Button) findViewById(R.id.button01);
         insertText = (EditText) findViewById(R.id.search_bar);
